@@ -58,7 +58,7 @@ export default {
   },
   mounted () {
     this.start()
-    document.addEventListener('keydown', this.eventListener)
+    document.addEventListener('keydown', this.keyListener)
   },
   methods: {
     restart () {
@@ -116,7 +116,7 @@ export default {
         }
       }
     },
-    eventListener (event) {
+    keyListener (event) {
       event.preventDefault()
       this.changeDirection(event)
       if (event.code === 'Space') {
